@@ -76,3 +76,5 @@ model.save('digits_model.h5')  # Saving the trained model to a file
 #------------------------------------------------
 loaded_model = keras.models.load_model('digits_model.h5')  # Loading the saved model
 loaded_model.summary()  # Displaying the model summary
+
+

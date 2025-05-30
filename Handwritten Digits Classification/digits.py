@@ -43,12 +43,13 @@ model = keras.Sequential([
     keras.layers.Dense(10, activation='softmax')                      # Output layer
 ])
 
+tbCallBack = tf.keras.callbacks.TensorBoard(log_dir = './logs', histogram_freq=1)
 
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-model.fit(x_trainRevised, y_train, epochs=5) # 5 epochs for training(no of iterations)
+model.fit(x_trainRevised, y_train, epochs=5, callbacks = [tbCallBack]) # 5 epochs for training(no of iterations)
 print("Model trained")
 
 # Without Adding Hidden Layer Accuracy and  without scaling~ 88% and high loss
@@ -75,6 +76,4 @@ model.save('digits_model.h5')  # Saving the trained model to a file
 # Loading the model
 #------------------------------------------------
 loaded_model = keras.models.load_model('digits_model.h5')  # Loading the saved model
-# loaded_model.summary()  # Displaying the model summary
-
-
+loaded_model.summary()  # Displaying the model summary

@@ -64,7 +64,6 @@ model.fit(x_train, y_train, validation_split=0.2, epochs=100, callbacks=[early_s
 
 ## 📈 Evaluation
 
-```bash
 ✅ Training Accuracy ≈ 81.6%
 ✅ Validation Accuracy ≈ 81.2%
 ✅ Test Accuracy ≈ ~77.8%
@@ -76,8 +75,6 @@ Confusion Matrix plotted using seaborn heatmap.
 ---
 
 ## 🧪 Tools & Libraries Used
-
-```bash
 - pandas, numpy, matplotlib, seaborn
 - scikit-learn (preprocessing, train_test_split, metrics)
 - TensorFlow / Keras (Sequential API, EarlyStopping)
@@ -86,7 +83,6 @@ Confusion Matrix plotted using seaborn heatmap.
 ---
 
 ## 📊 Visualization
-```bash
 - Tenure distribution: churned vs retained users
 - Confusion matrix of predictions vs actual labels
 ```
